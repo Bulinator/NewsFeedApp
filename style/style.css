@@ -1,0 +1,31 @@
+/*
+For developing, I use simple css styles, but for production I will use sass
+But as I'm still learning, I don't waste time on css ;)
+*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  font-size: 13px !important;
+}
+
+.card {
+  margin-bottom: 15px;
+}
+
+.card-img-top {
+    height: 200px;
+}
+
+.card-header {
+
+}
+
+/* icon */
+.title-icon {
+  margin-right: 5px;
+}
