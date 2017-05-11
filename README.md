@@ -11,7 +11,7 @@ Hope so it could help you too.
 
 ### Getting Started
 
-Do not forget to request an API KEY first.
+Do not forget to request an API KEY first and create a new folder config in src/
 
 Then to install this repository you have to option described below.
 
