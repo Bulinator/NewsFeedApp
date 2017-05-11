@@ -1,5 +1,7 @@
 # ReduxSimpleStarter
 
+## WORK IN PROGRESS: APPLICATION WILL BE IMPROVED WITH KNOWLEDGE I LEARNT ON REACT WORLD
+
 News feed application based on the repo of [ReduxSimpleStarter - Stephen Grider](https://github.com/StephenGrider/ReduxSimpleStarter)
 
 This application is building from scratch based on [News API](https://newsapi.org) to learn the basic of react, react-redux, redux-thunk, and more.
