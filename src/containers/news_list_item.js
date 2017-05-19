@@ -66,6 +66,7 @@ class NewsListItem extends Component {
     return (
       <div>
         { this.renderHeader() }
+          <hr className="colorgraph" />
         { this.renderNews() }
       </div>
     );
