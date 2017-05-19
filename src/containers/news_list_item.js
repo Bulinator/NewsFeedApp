@@ -31,7 +31,7 @@ class NewsListItem extends Component {
 
   // add render news function but work on it later
   renderNews() {
-    console.log(this.props.news);
+    //console.log(this.props.news);
 
     const articles = _.map(this.props.news, article => {
       return (

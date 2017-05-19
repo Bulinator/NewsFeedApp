@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { Link } from 'react-router-dom';
 import * as actions from '../actions';
 import FontAwesome from 'react-fontawesome';
+import { browserHistory } from 'react-router';
 
 class NewsSelection extends Component {
 

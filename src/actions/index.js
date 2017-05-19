@@ -11,7 +11,8 @@ export function fetchNews(sources) {
   return function(dispatch) {
     // check if sources is empty
     //(!sources) ? sources = ['talksport','cnn'] : sources = sources;
-    sources = sources ? sources : ['talksport', 'bbc-news','google-news'];
+
+    sources = sources ? sources : ['the-guardian-uk','talksport','techcrunch','fortune'];
     sources.map(source => axios.get(`${ROOT_URL}?source=${source}&apiKey=${API_KEY}`)
       .then(response => {
         dispatch({type: FETCH_NEWS, payload: response.data});
