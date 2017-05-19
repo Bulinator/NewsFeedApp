@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {fetchNews} from '../actions';
 import { Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
+import moment from 'moment'
 
 class NewsListItem extends Component {
 
@@ -37,10 +38,6 @@ class NewsListItem extends Component {
       return (
         <div key={article.title} className="col-xs-12 col-sm-6 col-md-4 d-flex align-items-stretch">
           <div className="card">
-            <div className="card-header">
-            {article.publishedAt}
-            </div>
-
             <img className="card-img-top img-fluid" src={article.urlToImage} alt="image-news-source" />
 
             <div className="card-block">
@@ -51,7 +48,7 @@ class NewsListItem extends Component {
             </div>
 
             <div className="card-footer">
-              Author: <i>{article.author ? article.author : 'Unknown'}</i>
+              Author: <i>{article.author ? article.author : 'Unknown'} - {moment(article.publishedAt).fromNow()}</i>
             </div>
           </div>
         </div>
