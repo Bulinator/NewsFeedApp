@@ -10,11 +10,11 @@ const SRC_URL = 'https://newsapi.org/v1/sources?language=en';
 export function fetchNews(sources) {
   return function(dispatch) {
     // check if sources is empty
-    (!sources) ? sources = ['talksport','cnn'] : sources = sources;
+    //(!sources) ? sources = ['talksport','cnn'] : sources = sources;
+    sources = sources ? sources : ['talksport', 'cnn','bbc-news'];
     sources.map(source => axios.get(`${ROOT_URL}?source=${source}&apiKey=${API_KEY}`)
       .then(response => {
-        //console.log(response);
-        dispatch({type: FETCH_NEWS, payload: response});
+        dispatch({type: FETCH_NEWS, payload: response.data});
       })
       .catch(() => {
         console.log('API NOT AVAILABLE');
@@ -22,14 +22,7 @@ export function fetchNews(sources) {
     );
   }
 }
-/*
-function getNewsList(articles) {
-  return {
-    type: FETCH_NEWS,
-    payload: articles
-  }
-}
-*/
+
 export function fetchSource() {
   const request = axios.get(`${SRC_URL}`);
 

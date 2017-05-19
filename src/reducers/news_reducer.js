@@ -1,17 +1,12 @@
 import _ from 'lodash';
-import { FETCH_NEWS, FETCH_SOURCES } from '../actions';
+import { FETCH_NEWS, FETCH_SOURCES } from '../actions/types';
 
 export default function(state = {}, action) {
 
-console.log(action);
   switch (action.type) {
     case FETCH_NEWS:
-      console.log('action',action.payload);
-      //return action.payload;
-      console.log(action);
-      //return action.payload.data;
-      //return action.payload
-      return action.payload.data;
+      return [...state, ...action.payload.articles];
+      //return action.payload.articles; => test
     case FETCH_SOURCES:
       return _.mapKeys(action.payload.data, 'articles');
     default:
