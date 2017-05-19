@@ -25,7 +25,6 @@ class NewsSelection extends Component {
 
   onSubmit() {
     this.props.fetchNews(this.state.items);
-    this.props.history.push('/');
   }
 
   renderSource() {

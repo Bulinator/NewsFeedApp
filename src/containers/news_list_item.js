@@ -1,6 +1,7 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { fetchNews } from '../actions';
+import {fetchNews} from '../actions';
 import { Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 
@@ -8,15 +9,13 @@ class NewsListItem extends Component {
 
   // once component is rendering, fetch news from middleware
   componentDidMount() {
-      this.props.fetchNews();
+    this.props.fetchNews();
   }
 
   // render title of source (will be improved later)
   renderSource() {
     return (
-      <h3> News:
-        <span className="text-muted">{this.props.news.source}</span>
-      </h3>
+      <h3> News test:</h3>
     );
   }
 
@@ -42,25 +41,21 @@ class NewsListItem extends Component {
 
   // add render news function but work on it later
   renderNews() {
-    //console.log(this.props.news);
+
   }
 
   // render component
   render() {
-    const { news } = this.props;
-
     return (
-      <div className="news-list-item">
-        { this.renderSource() }
-        { this.renderCopyrightApi() }
-        { this.renderNews() }
-      </div>
-    );
+      <div> coucou george </div>
+    )
+
   }
 }
 
-function mapStateToProps({ news }, ownProps) {
+function mapStateToProps({news}) {
+  console.log({news});
   return { news }
 }
 
-export default connect((state=>state), {fetchNews})(NewsListItem);
+export default connect(mapStateToProps, {fetchNews})(NewsListItem);

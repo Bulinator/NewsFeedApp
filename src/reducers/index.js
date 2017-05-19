@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import newsReducer from './news_reducer';
 
 const rootReducer = combineReducers({
-  news: (state = [], action) => action.payload || state,
+  news: newsReducer,
   sources: (state =[], action) => action.payload || state
 });
 

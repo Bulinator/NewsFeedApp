@@ -5,9 +5,11 @@ import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import reduxThunk from 'redux-thunk';
 
+
 import NewsList from './components/news_list';
 import NewsSelection from './components/news_selection';
 import reducers from './reducers';
+//import Async from './middleswares/async';
 
 const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
 
