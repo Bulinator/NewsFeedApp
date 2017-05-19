@@ -37,16 +37,22 @@ class NewsListItem extends Component {
       return (
         <div key={article.title} className="col-xs-12 col-sm-6 col-md-4 d-flex align-items-stretch">
           <div className="card">
+            <div className="card-header">
+            {article.publishedAt}
+            </div>
+
             <img className="card-img-top img-fluid" src={article.urlToImage} alt="image-news-source" />
+
             <div className="card-block">
               <div className="card-title">
-                <h5><a href={article.url} target="_blank" rel="noopener noreferrer">{article.title}</a></h5>
+                <h5><a href={article.url} target="_blank" rel="noopener noreferrer">{article.title.substring(0,20)}</a></h5>
               </div>
               <div className="card-text text-justify">{ article.description }</div>
             </div>
-          <div className="card-footer">
-            {article.author}
-          </div>
+
+            <div className="card-footer">
+              Author: <i>{article.author ? article.author : 'Unknown'}</i>
+            </div>
           </div>
         </div>
       );
